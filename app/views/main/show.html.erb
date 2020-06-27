@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gastos de <%=@client.nombre%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Costo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.nombre %></td>
+        <td><%= service.costo %></td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<span> Total a pagar <%= @total%></span>
+
+
+<br>
